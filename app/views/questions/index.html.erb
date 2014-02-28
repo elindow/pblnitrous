@@ -1,0 +1,38 @@
+<h1>Listing questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Page</th>
+      <th>Qtext</th>
+      <th>Topics</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.num %></td>
+        <td><%= question.page %></td>
+        <td><%= question.qtext %></td>
+        <% question.topics.each do |t| %>
+          <td><%=  t.topicName %></td>
+        <% end %>
+        <td><%= question.notes %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>
+<%= link_to 'Topics', topics_path %>
