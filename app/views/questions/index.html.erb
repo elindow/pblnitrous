@@ -3,11 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Num</th>
       <th>Page</th>
+      <th>Num</th>
       <th>Qtext</th>
-      <th>Topics</th>
+      <th>Answer</th>
       <th>Notes</th>
+      <th>Topics</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,13 +18,12 @@
   <tbody>
     <% @questions.each do |question| %>
       <tr>
-        <td><%= question.num %></td>
         <td><%= question.page %></td>
-        <td><%= question.qtext %></td>
-        <% question.topics.each do |t| %>
-          <td><%=  t.topicName %></td>
-        <% end %>
-        <td><%= question.notes %></td>
+        <td><%= question.num %></td>
+        <td><%= question.qtext[0..70] %></td>
+        <td><%= question.answer[0..70] %></td>
+        <td><%= question.notes[0..40] %></td>
+        <td><%=    question.topics.count %></td>
         <td><%= link_to 'Show', question %></td>
         <td><%= link_to 'Edit', edit_question_path(question) %></td>
         <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>

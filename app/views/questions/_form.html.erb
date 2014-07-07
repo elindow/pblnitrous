@@ -21,14 +21,18 @@
   </div>
   <div class="field">
     <%= f.label :qtext %><br>
-    <%= f.text_area :qtext %>
+    <%= f.text_area :qtext, "cols" => 90, "rows" => 5 %>
   </div>
   <div class="field">
+    <%= f.label :answer %><br>
+    <%= f.text_area :answer, "cols" => 90, "rows" => 5 %>
+  </div>
+ <div class="field">
     <%= f.label :notes %><br>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, "cols" => 90, "rows" => 7 %>
   </div>
   <div class="field">
-    <%= fields_for @topic do |tf| %>
+    <%= fields_for :topic do |tf| %>
       <%= tf.label :topics %><br>
       <%= tf.collection_select :topic_id, Topic.all, :id, :topicName %>
     <% end %>
