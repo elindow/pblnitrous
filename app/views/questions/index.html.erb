@@ -1,4 +1,8 @@
-<h1>Listing questions</h1>
+<h1>List of Questions</h1>
+<%= link_to 'New Question', new_question_path %>
+<%= link_to 'Topics', topics_path %>
+
+<br>
 
 <table>
   <thead>
@@ -16,6 +20,7 @@
   </thead>
 
   <tbody>
+    <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse %>
     <% @questions.each do |question| %>
       <tr>
         <td><%= question.page %></td>
@@ -23,7 +28,7 @@
         <td><%= question.qtext[0..70] %></td>
         <td><%= question.answer[0..70] %></td>
         <td><%= question.notes[0..40] %></td>
-        <td><%=    question.topics.count %></td>
+        <td><%= question.topics.count %></td>
         <td><%= link_to 'Show', question %></td>
         <td><%= link_to 'Edit', edit_question_path(question) %></td>
         <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
