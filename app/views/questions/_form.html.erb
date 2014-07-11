@@ -33,7 +33,7 @@
  </div>
 
  <div class="field">
-   <% for topic in Topic.find(:all) %>
+   <% for topic in Topic.find(:all, :order => '"topicName"' ) %>
      <%= check_box_tag "question[topic_ids][]", topic.id, @question.topics.include?(topic) %>
      <%= topic.topicName %>
    <%end%>
