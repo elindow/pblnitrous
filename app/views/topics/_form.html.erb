@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :topicName %><br>
+    <%= f.label "Topic:" %>
     <%= f.text_field :topicName %>
   </div>
   <div class="field">
-    <%= f.label :comments %><br>
-    <%= f.text_area :comments %>
+    <%= f.label "Comments:" %>
+    <%= f.text_area :comments, "rows" => 4 %>
   </div>
   <div class="actions">
     <%= f.submit %>

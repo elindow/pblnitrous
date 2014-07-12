@@ -1,6 +1,8 @@
 <h1>List of Questions</h1>
+
 <%= link_to 'New Question', new_question_path %>
 <%= link_to 'Topics', topics_path %>
+<%= " There are currently #{Question.count} questions in the list." %>
 
 <br>
 

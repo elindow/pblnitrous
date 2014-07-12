@@ -1,11 +1,11 @@
 To do:
 1) commas between topic output in show view
 2) date created and date modified in show view
-3) twitter bootstrap
+3) twitter bootstrap - begun 7/11/14
 4) devise
 5) monospaced font in show question
 6) default question and page number for new questions
 7) save question goes to list rather than show
 8) filter question list output by page, topic, etc.
-9) list #of pages having each topic in topic view
+9) list #of pages having each topic in topic view - done 7/11/14
 10) 

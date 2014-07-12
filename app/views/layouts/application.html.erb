@@ -9,7 +9,8 @@
   <meta name="author" content="<%= meta_author %>">
   <meta name="Keywords" content="<%= meta_keywords %>">  
   
-  <title>Pbl</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title><%= full_title(yield(:title)) %></title>
   
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -18,8 +19,9 @@
   
   <style>
   label { padding: 0; margin: 0; display: block; }
-  textarea { width: 100%; border: 1px solid #333; padding: 4px; }
-  .the-fix { padding-right: 10px; }
+  textarea { width: 99%; border: 1px solid #333; padding: 4px; font-family: "Courier New", Courier, monospace; }
+  textfield { width: 100%; border: 1px solid #333; padding: 4px; }
+  .the-fix { padding-right: 20px; }
  </style>
   
 </head>
