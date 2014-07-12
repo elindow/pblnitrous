@@ -5,7 +5,7 @@
     <tr>
       <th>Topicname</th>
       <th>Comments</th>
-      <th>Question</th>
+      <th>Q Count</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,9 +17,12 @@
       <tr>
         <td><%= topic.topicName %></td>
         <td><%= topic.comments %></td>
+        <td><%= topic.questions.count %>
+        <% if false %>
         <% topic.questions.each do |q| %>
           <td><%= q.num %> <td>
         <% end %>
+        <%end%>
         <td><%= link_to 'Show', topic %></td>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>

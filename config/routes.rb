@@ -3,7 +3,13 @@
 Pbl::Application.routes.draw do
   resources :questions
   resources :topics
-  root 'questions#index'
+  #root 'questions#index'
+  
+  get '/about'    => 'high_voltage/pages#show', id: 'about'
+  
+  get '/home', to: redirect('/')
+
+  root :to => 'high_voltage/pages#show', id: 'home'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

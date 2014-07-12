@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= meta_description %>">
+  <meta name="author" content="<%= meta_author %>">
+  <meta name="Keywords" content="<%= meta_keywords %>">  
+  
   <title>Pbl</title>
+  <title><%= full_title(yield(:title)) %></title>
+  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
+  <style>
+  label { padding: 0; margin: 0; display: block; }
+  textarea { width: 100%; border: 1px solid #333; padding: 4px; }
+  .the-fix { padding-right: 10px; }
+ </style>
+  
 </head>
 <body>
-
+<div class="container-fluid">
+<div class="navbar navbar-fixed-top">  
+  <div class="navbar-inner">  
+    <div class="container">  
+      <ul class="nav">  
+        <li class="active">  
+          <a class="brand" href="#">TrevorPBL</a>  
+        </li>  
+        <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+        <li class="<%= 'active' if current_page?(questions_path) %>"><%= link_to "Questions", questions_path %></li>  
+        <li class="<%= 'active' if current_page?(topics_path) %>"><%= link_to "Topics", topics_path %></li>  
+        <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>  
+      </ul> 
+    </div>  
+  </div>  
+</div>
 <%= yield %>
-
+</div>
 </body>
 </html>
