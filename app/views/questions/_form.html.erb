@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-inline">
     <%= f.label :num %>
     <%= f.number_field :num %>
     <%= f.label :page %>
@@ -25,6 +25,7 @@
   <div class="field">
     <%= f.label :answer %>
     <%= f.text_area :answer, "rows" => 7 %>
+    <%= f.file_field :aimage %>
   </div>
  <div class="field">
     <%= f.label :notes %>
