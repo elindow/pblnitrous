@@ -1,8 +1,8 @@
 <h1>List of Questions</h1>
 
-<%= link_to 'New Question', new_question_path %>
-<%= link_to 'Topics', topics_path %>
-<%= " There are currently #{Question.count} questions in the list." %>
+<%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+<%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>
+<%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
 
 <br>
 
@@ -31,9 +31,9 @@
         <td><%= question.answer[0..70] %></td>
         <td><%= question.notes[0..40] %></td>
         <td><%= question.topics.count %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', question, :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -41,5 +41,5 @@
 
 <br>
 
-<%= link_to 'New Question', new_question_path %>
-<%= link_to 'Topics', topics_path %>
+<%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+<%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>

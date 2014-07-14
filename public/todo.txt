@@ -1,6 +1,6 @@
 To do:
-1) commas between topic output in show view
-2) date created and date modified in show view
+1) commas between topic output in show view - done 7/13/2014
+2) date created and date modified in show view - done 7/13/2014
 3) twitter bootstrap - begun 7/11/14
 4) devise
 5) monospaced font in show question
@@ -8,4 +8,5 @@ To do:
 7) save question goes to list rather than show
 8) filter question list output by page, topic, etc.
 9) list #of pages having each topic in topic view - done 7/11/14
-10) 
+10) facility to upload files
+11)

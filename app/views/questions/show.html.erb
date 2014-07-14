@@ -3,9 +3,13 @@
 <p>
   <strong>Page:</strong>
   <%= @question.page %>
-
   <strong>Num:</strong>
   <%= @question.num %>
+    <strong>Created:</strong>
+  <%= @question.created_at.strftime("%m/%d/%y") %>
+  <strong>Modified:</strong>
+  <%= @question.updated_at.strftime("%m/%d/%y")  %>
+
 </p>
 
 <pre>
@@ -18,6 +22,12 @@
   <%= @question.answer %>
 </p>
 </pre>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @question.qimage.url(:thumb).to_s %>
+</p>
+
 <p>
   <strong>Notes:</strong>
   <%= @question.notes %>
@@ -26,9 +36,10 @@
 <p>
   <strong>Topics:</strong>
   <% @question.topics.each do |t| %>
-    <td><%=  t.topicName %></td>
+    <td><%= t.topicName%></td>
+    - 
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<%= link_to 'Edit', edit_question_path(@question), :class => 'btn btn-mini' %> |
+<%= link_to 'Back', questions_path, :class => 'btn btn-mini' %>
