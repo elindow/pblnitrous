@@ -28,6 +28,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        @nextnum = @question.num + 1
         format.html { redirect_to @question, notice: 'Question was successfully created.' }
         format.json { render action: 'index', status: :created, location: @question }
       else

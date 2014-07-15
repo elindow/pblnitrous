@@ -10,7 +10,9 @@ To do:
 9) list #of pages having each topic in topic view - done 7/11/14
 10) facility to upload files = 7/14/14
 11) show # of files uploaded
-12) add difficulty rating
+12) ability to dispaly full image instead of thumbnail
+13) add difficulty rating
+14) add search function in menu bar
 
 
 answer graphs to be added - 15.5, 16.2, 16.4, 18.1

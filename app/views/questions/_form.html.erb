@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <% if @question.new_record? %>
+     <% @question.num = Question.last.num+1%>
+     <% @question.page = Question.maximum("page")%>
+  <%end%>
+
   <div class="form-inline">
     <%= f.label :num %>
     <%= f.number_field :num %>
