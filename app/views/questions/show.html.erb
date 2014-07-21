@@ -24,8 +24,10 @@
 </pre>
 
 <p>
-  <strong>Image:</strong>
+  <strong>Images:</strong>
+  <%= "Question:"%>
   <%= image_tag @question.qimage.url(:thumb).to_s %>
+  <%= "Answer:"%>
   <%= image_tag @question.aimage.url(:thumb).to_s %>
 </p>
 
