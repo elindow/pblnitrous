@@ -15,7 +15,9 @@ Pbl::Application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-
+  
+  #set up local mailer for Devise
+  config.action_mailer.default_url_options = { host: 'http://rubydev-22805.use1.nitrousbox.com' } 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
