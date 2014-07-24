@@ -15,6 +15,7 @@
       <th>Answer</th>
       <th>Notes</th>
       <th>Topics</th>
+      <th>Images</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,13 +25,17 @@
   <tbody>
     <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse %>
     <% @questions.each do |question| %>
+      <% i = 0 %>
+      <% i += 1 if question.qimage?%>
+      <% i += 1 if question.aimage?%>
       <tr>
         <td><%= question.page %></td>
         <td><%= question.num %></td>
-        <td><%= question.qtext[0..70] %></td>
-        <td><%= question.answer[0..70] %></td>
-        <td><%= question.notes[0..40] %></td>
+        <td><%= question.qtext[0..50] %></td>
+        <td><%= question.answer[0..50] %></td>
+        <td><%= question.notes[0..30] %></td>
         <td><%= question.topics.count %></td>
+        <td><%= i %></td>
         <td><%= link_to 'Show', question, :class => 'btn btn-mini' %></td>
         <td><%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %></td>
         <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini' %></td>

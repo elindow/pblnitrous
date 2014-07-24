@@ -26,11 +26,17 @@
     <%= f.label :qtext %>
     <%= f.text_area :qtext,  "rows" => 7 %>
     <%= f.file_field :qimage %>
+    <%= image_tag @question.qimage.url(:small_thumb).to_s if @question.qimage?%>
+    <%= f.check_box :remove_qimage if @question.qimage?%>
+    <%=  "Remove Question Image" if @question.qimage?%>
   </div>
   <div class="field">
     <%= f.label :answer %>
     <%= f.text_area :answer, "rows" => 7 %>
     <%= f.file_field :aimage %>
+    <%= image_tag @question.aimage.url(:small_thumb).to_s if @question.aimage?%>
+    <%= f.check_box :remove_aimage if @question.aimage?%>
+    <%=  "Remove Answer Image" if @question.aimage?%>
   </div>
  <div class="field">
     <%= f.label :notes %>
