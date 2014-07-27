@@ -18,8 +18,10 @@
   <%= @question.qtext %>
 </p>
 <p>
-  <strong>Answer:</strong>
-  <%= @question.answer %>
+  <% if user_signed_in? %>
+    <strong>Answer:</strong>
+    <%= @question.answer %>
+  <% end %>
 </p>
 </pre>
 

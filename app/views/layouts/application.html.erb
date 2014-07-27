@@ -40,6 +40,11 @@
         <% else %>
           <li class="<%= 'active' if current_page?(new_user_session_path) %>"><%= link_to "Sign In", new_user_session_path %>
         <% end %>
+        <% if user_signed_in? %>
+        <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Edit Account", edit_user_registration_path %></li>
+        <% else %>
+          <li class="<%= 'active' if current_page?(new_user_registration_path) %>"><%= link_to "Sign Up", new_user_registration_path %>
+        <% end %>
         <li class="<%= 'active' if current_page?(questions_path) %>"><%= link_to "Questions", questions_path %></li>  
         <li class="<%= 'active' if current_page?(topics_path) %>"><%= link_to "Topics", topics_path %></li>  
         <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>  
