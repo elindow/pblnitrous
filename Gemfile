@@ -13,6 +13,9 @@ gem 'carrierwave'
 #for user authentication and management
 gem 'devise'
 
+#for sortable listing from database
+gem 'ransack'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

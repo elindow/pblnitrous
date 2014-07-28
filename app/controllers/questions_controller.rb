@@ -4,7 +4,8 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+    @q = Question.search(params[:q])
+    @questions = @q.result(distinct: true)
   end
 
   # GET /questions/1
@@ -71,6 +72,6 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:num, :page, :qtext, :answer, :notes, :qimage, :remove_qimage, :aimage, :remove_aimage, {:topic_ids => []})
+      params.require(:question).permit(:num, :page, :qtext, :answer, :notes, :qimage, :remove_qimage, :aimage, :remove_aimage, {:topic_ids => []}, :page_cont)
     end
 end

@@ -1,10 +1,18 @@
-<h1>List of Questions</h1>
+<h2>List of Questions</h2>
 
 <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
 <%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>
 <%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
-
 <br>
+<%= search_form_for @q do |f| %>
+  <div class="field">
+    <%= f.label :page_gteq, "Page # >", :style => "display: inline" %>
+   <%= f.search_field :page_gteq, :style => "display: inline"  %>
+   <%= f.label :qtext_cont, :style => "display: inline"  %>
+   <%= f.search_field :qtext_cont, :style => "display: inline"  %>
+   <%= f.submit %>
+  </div>
+<% end %>
 
 <table>
   <thead>
