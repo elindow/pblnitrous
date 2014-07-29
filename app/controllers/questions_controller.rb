@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
     @q = Question.search(params[:q])
+    @q.page_gteq = Question.maximum("page")-1 unless params[:q]
     @questions = @q.result(distinct: true)
   end
 

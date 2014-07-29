@@ -5,22 +5,22 @@
 <%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
 <br>
 <%= search_form_for @q do |f| %>
-  <div class="field">
-    <%= f.label :page_gteq, "Page # >", :style => "display: inline" %>
-   <%= f.search_field :page_gteq, :style => "display: inline"  %>
-   <%= f.label :qtext_cont, :style => "display: inline"  %>
-   <%= f.search_field :qtext_cont, :style => "display: inline"  %>
-   <%= f.submit %>
-  </div>
+    <%= f.label :page_gteq, "Page # >=", :style => "display: inline;" %>
+    <%= f.search_field :page_gteq, {size: "3", :style => "display: inline;"} %>
+    <%= f.label :page_lteq, "and <=", :style => "display: inline" %>
+    <%= f.search_field :page_lteq, :style => "display: inline"  %>
+    <%= f.label :qtext_cont, :style => "display: inline"  %>
+    <%= f.search_field :qtext_cont, :style => "display: inline"  %>
+    <%= f.submit %>
 <% end %>
 
 <table>
   <thead>
     <tr>
-      <th>Page</th>
-      <th>Num</th>
-      <th>Qtext</th>
-      <th>Answer</th>
+      <th><%= sort_link @q, :page, "Pg" %></th>
+      <th><%= sort_link @q, :num, "#" %></th>
+      <th>Question Text</th>
+      <th>Answer Text</th>
       <th>Notes</th>
       <th>Topics</th>
       <th>Images</th>
@@ -31,7 +31,7 @@
   </thead>
 
   <tbody>
-    <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse %>
+    <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse unless params[:q]%>
     <% @questions.each do |question| %>
       <% i = 0 %>
       <% i += 1 if question.qimage?%>

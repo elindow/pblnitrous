@@ -6,23 +6,17 @@ To do:
 5) monospaced font in show question
 6) default question and page number for new questions - done 7/20/14
 7) save question goes to list rather than show
-8) filter question list output by page, topic, etc.
+8) filter question list output by page, topic, etc. - done (basic ransack) 7/28/14
 9) list #of pages having each topic in topic view - done 7/11/14
 10) facility to upload files - done 7/14/14
 11) show # of files uploaded -done 7/23/14
-12) ability to dispaly full image instead of thumbnail
+12) ability to display full image instead of thumbnail
 13) add difficulty rating
-14) add search function in menu bar
+14) add search function in menu bar - done (basic ransack) 7/28/14
 15) button to remove graphic - done 7/23/14
-16) devise hide answers if not signed in
+16) devise hide answers if not signed in - done 7/26/14
+17) devise security - guests, students limited view
 
 
 answer graphs to be added - 16.2, 16.4, 18.1
 
-<% search_form_for @q do |f| %>
-  <div class="field">
-    <%= f.label :page_cont, "Page" %>
-    <%= f.text_field :page_cont %>
-  </div>
-  <div class="acttions"><%= f.submit "By Page" %></div>
-<% end %>
