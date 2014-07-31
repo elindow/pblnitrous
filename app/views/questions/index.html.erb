@@ -22,8 +22,10 @@
       <th><%= sort_link @q, :page, "Pg" %></th>
       <th><%= sort_link @q, :num, "#" %></th>
       <th>Question Text</th>
-      <th>Answer Text</th>
-      <th>Notes</th>
+      <% if can? :update, @question %>
+        <th>Answer Text</th>
+        <th>Notes</th>
+      <% end %>
       <th>Topics</th>
       <th>Images</th>
       <th></th>
@@ -42,8 +44,10 @@
         <td><%= question.page %></td>
         <td><%= question.num %></td>
         <td><%= question.qtext[0..50] %></td>
-        <td><%= question.answer[0..50] %></td>
-        <td><%= question.notes[0..30] %></td>
+        <% if can? :update, question %>
+          <td><%= question.answer[0..50] %></td>
+          <td><%= question.notes[0..30] %></td>
+        <% end %>
         <td><%= question.topics.count %></td>
         <td><%= i %></td>
         <td><%= link_to 'Show', question, :class => 'btn btn-mini' %></td>
