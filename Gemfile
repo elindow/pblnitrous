@@ -13,6 +13,9 @@ gem 'carrierwave'
 #for user authentication and management
 gem 'devise'
 
+#for authorization
+gem 'cancancan'
+
 #for sortable listing from database
 gem 'ransack'
 
