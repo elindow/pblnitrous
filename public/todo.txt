@@ -1,19 +1,20 @@
 To do:
-5) monospaced font in show question
+
 7) save question goes to list rather than show
 12) ability to display full image instead of thumbnail
 13) add difficulty rating
-17) devise security - guests, students limited view
 18) add a 'links to questions' field holding an array
-19) add roles to devise
+19) add teacher role to devise
 20) clean up bootstrap css files
 21) add sorting id field that is calculated from page and num
+22) hide image display when no image
 
 Done:
 1) commas between topic output in show view - done 7/13/2014
 2) date created and date modified in show view - done 7/13/2014
 3) twitter bootstrap - begun 7/11/14
 4) devise - basuc setup 7/24/14
+5) monospaced font in show question - done 7/30/14
 6) default question and page number for new questions - done 7/20/14
 8) filter question list output by page, topic, etc. - done (basic ransack) 7/28/14
 9) list #of pages having each topic in topic view - done 7/11/14
@@ -22,6 +23,7 @@ Done:
 14) add search function in menu bar - done (basic ransack) 7/28/14
 15) button to remove graphic - done 7/23/14
 16) devise hide answers if not signed in - done 7/26/14
+17) devise security - admin, teacher full view - guests, students limited view - done 7/31/14
 
 
 

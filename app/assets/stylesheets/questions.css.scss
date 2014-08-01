@@ -25,5 +25,14 @@ th {
    size: 3;
 }
 
+pre {
+    border: 2px solid black; 
+    font-family: Consolas,"Lucida Console", Monaco,"Courier New", Courier, monospace;
+}
+
+span.inner-pre {
+    font-size: 130%;
+    
+}
 
 

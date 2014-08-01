@@ -12,27 +12,24 @@
 
 </p>
 
-<pre>
 <p>
-  <strong>Qtext:</strong>
+  <strong>Question:</strong>
   <%= @question.qtext %>
 </p>
-<p>
-  <% if user_signed_in? %>
-    <strong>Answer:</strong>
-    <% if can? :update, @question %>
-      <%= @question.answer %>
-    <% end %> 
-  <% end %>
+<p>  
+  <strong>Question Image:</strong>
+  <%= image_tag @question.qimage.url.to_s %>
 </p>
-</pre>
+
+<% if can? :update, @question %>
+<pre><span class="inner-pre"><strong><strong>Answer:</strong></strong>
+<%= @question.answer %>
+</span></pre>
+<% end %> 
 
 <p>
-  <strong>Images:</strong>
-  <%= "Question:"%>
-  <%= image_tag @question.qimage.url(:thumb).to_s %>
   <% if can? :update, @question %>
-    <%= "Answer:"%>
+    <strong>Answer Image:</strong>
     <%= image_tag @question.aimage.url(:thumb).to_s %>
   <% end %>
 </p>
