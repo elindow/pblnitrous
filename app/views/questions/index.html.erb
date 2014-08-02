@@ -35,7 +35,7 @@
   </thead>
 
   <tbody>
-    <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse unless params[:q]%>
+    <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse%>
     <% @questions.each do |question| %>
       <% i = 0 %>
       <% i += 1 if question.qimage?%>

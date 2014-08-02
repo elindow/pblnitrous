@@ -8,6 +8,8 @@ To do:
 20) clean up bootstrap css files
 21) add sorting id field that is calculated from page and num
 22) hide image display when no image
+23) rspec test suite
+24) put show/answer into a bordered box
 
 Done:
 1) commas between topic output in show view - done 7/13/2014
