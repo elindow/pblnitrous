@@ -8,6 +8,15 @@ class Ability
        
     if user.admin?
        can :manage, :all
+    elsif user.teacher?
+       can :create, :question
+       can :create, :topic
+       can :update, :question
+       can :update, :topic
+       can :read, :question
+       can :read, :topic
+    elsif user.viewer?
+      #add guest viewer here, can read questions and answers
     else
        can :read, :all
     end
