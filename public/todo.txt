@@ -4,12 +4,14 @@ To do:
 12) ability to display full image instead of thumbnail
 13) add difficulty rating
 18) add a 'links to questions' field holding an array
-19) add teacher role to devise
 20) clean up bootstrap css files
 21) add sorting id field that is calculated from page and num
 22) hide image display when no image
 23) rspec test suite
 24) put show/answer into a bordered box
+26) admin can manage users
+27) add level (which course)
+28) put signin info in navbar
 
 Done:
 1) commas between topic output in show view - done 7/13/2014
@@ -26,6 +28,8 @@ Done:
 15) button to remove graphic - done 7/23/14
 16) devise hide answers if not signed in - done 7/26/14
 17) devise security - admin, teacher full view - guests, students limited view - done 7/31/14
+19) add teacher role to devise - done 8/1/14
+25) flash messages don't work - fixed 8/3/14
 
 
 

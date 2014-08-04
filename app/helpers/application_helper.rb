@@ -8,10 +8,10 @@ def site_name
   def site_url
     if Rails.env.production?
       # Place your production URL in the quotes below
-      "https://www.nitrous.io/app#/boxes/22805/ide"
+      "http://rubydev-22805.use1.nitrousbox.com/"
     else
       # Our dev & test URL
-      "https://www.nitrous.io/app#/boxes/22805/ide"
+      "http://rubydev-22805.use1.nitrousbox.com/"
     end
   end
 
