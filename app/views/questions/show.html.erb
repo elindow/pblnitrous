@@ -16,10 +16,12 @@
   <strong>Question:</strong>
   <%= @question.qtext %>
 </p>
+<% unless @question.qimage.url.nil? %>
 <p>  
-  <strong>Question Image:</strong>
+  <strong>Question Image: </strong>
   <%= image_tag @question.qimage.url.to_s %>
 </p>
+<% end %>
 
 <% if can? :update, @question %>
 <pre><span class="inner-pre"><strong><strong>Answer:</strong></strong>
@@ -28,9 +30,11 @@
 <% end %> 
 
 <p>
-  <% if can? :update, @question %>
+  <% if can? :update, @question  %>
+  <% unless @question.aimage.url.nil? %>
     <strong>Answer Image:</strong>
     <%= image_tag @question.aimage.url(:thumb).to_s %>
+  <% end %>
   <% end %>
 </p>
 
