@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 td {
-  text-align: right;
+  text-align: left;
 }
 
 table, th, td {
@@ -21,10 +21,6 @@ th {
     color: #000000;
 }
 
-.q_page_gteq {
-   size: 3;
-}
-
 pre {
     border: 2px solid black; 
     font-family: Consolas,"Lucida Console", Monaco,"Courier New", Courier, monospace;
@@ -35,4 +31,16 @@ span.inner-pre {
     
 }
 
+#searchfpn {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.1em;
+  margin: .25em;
+}
 
+#searchfpt {
+  display: inline-block;
+  width: 10em;
+  height: 1.1em;
+  margin: .25em;
+}

@@ -7,12 +7,18 @@
 <%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
 <br>
 <%= search_form_for @q do |f| %>
-    <%= f.label :page_gteq, "Page # >=", :style => "display: inline;" %>
-    <%= f.search_field :page_gteq, {size: "3", :style => "display: inline;"} %>
-    <%= f.label :page_lteq, "and <=", :style => "display: inline" %>
-    <%= f.search_field :page_lteq, :style => "display: inline"  %>
-    <%= f.label :qtext_cont, :style => "display: inline"  %>
-    <%= f.search_field :qtext_cont, :style => "display: inline"  %>
+    <%= f.label :page_eq, "Page# =", :style => "display: inline-block" %>
+    <%= f.search_field :page_eq, :id => "searchfpn" %>
+    <%= f.label :page_gteq, "Page# >=", :style => "display: inline-block" %>
+    <%= f.search_field :page_gteq, {:width => "200px", :id => "searchfpn"} %>
+    <%= f.label :page_lteq, "and <=", :style => "display: inline-block" %>
+    <%= f.search_field :page_lteq, :id => "searchfpn"  %>
+    <%= f.label :qtext_cont, "Question contains", :style => "display: inline-block"  %>
+    <%= f.search_field :qtext_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "Answer contains", :style => "display: inline-block"  %>
+    <%= f.search_field :answer_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "Notes contain", :style => "display: inline-block"  %>
+    <%= f.search_field :notes_cont, :id => "searchfpt"  %>
     <%= f.submit %>
 <% end %>
 
