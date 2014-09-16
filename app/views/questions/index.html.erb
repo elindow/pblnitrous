@@ -32,8 +32,8 @@
         <th>Answer Text</th>
         <th>Notes</th>
       <% end %>
-      <th>Topics</th>
-      <th>Images</th>
+      <th>Top</th>
+      <th>Img</th>
       <th></th>
       <th></th>
       <th></th>
@@ -55,7 +55,7 @@
         <td><%= question.qtext[0..50] %></td>
         <% if can? :update, question %>
           <td><%= question.answer[0..50] %></td>
-          <td><%= question.notes[0..30] %></td>
+          <td><%= question.notes[0..40] %></td>
         <% end %>
         <td><%= question.topics.count %></td>
         <td><%= i %></td>

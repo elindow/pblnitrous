@@ -1,28 +1,22 @@
-== README
+== This is a Rails based site for storing information about Problem Based Learning math problems as used at Trevor Day School
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Questions courtesy of Phillips Exeter Academy
 
-Things you may want to cover:
+* Creates/maintains a database of questions and topics (has_and_belongs_to_many relationship)
 
-* Ruby version
+* Ruby version 2.0, Rails 4.0.0
 
-* System dependencies
+* PostgresSQL database
 
-* Configuration
+* User authentication from Devise
 
-* Database creation
+* Object authorization from CanCan
 
-* Database initialization
+* Image Management from CarrierWave/Rmagick
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Built on Nitrous.io
 
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
