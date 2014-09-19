@@ -43,7 +43,9 @@
   <tbody>
     <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse%>
     <% cp = @questions.max { |a, b| a.page <=> b.page } %>
-    <% @cur_page = cp.page %>
+    <% qcp = Question.find_by_num('-1') %>
+    <% qcp.page = cp.page %>
+    <% qcp.save %>
     <% puts @cur_page %>
     <% @questions.each do |question| %>
       <% i = 0 %>

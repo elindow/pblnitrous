@@ -7,7 +7,8 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
     if @cur_page.nil? 
-      @cur_page = Question.maximum("page")-1 
+      cp = Question.find_by_num("-1")
+      @cur_page = cp.page.abs
     end
     puts @cur_page
     @q = Question.search(params[:q])
