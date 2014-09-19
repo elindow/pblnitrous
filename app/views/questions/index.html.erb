@@ -46,7 +46,6 @@
     <% qcp = Question.find_by_num('-1') %>
     <% qcp.page = cp.page %>
     <% qcp.save %>
-    <% puts @cur_page %>
     <% @questions.each do |question| %>
       <% i = 0 %>
       <% i += 1 if question.qimage?%>
