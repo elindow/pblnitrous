@@ -14,6 +14,7 @@
   <% if @question.new_record? %>
      <% @question.num = Question.last.num+1%>
      <% @question.page = Question.maximum("page")%>
+     <% @question.level = 1 %>
   <%end%>
 
   <div class="form-inline">
@@ -21,18 +22,28 @@
     <%= f.number_field :num %>
     <%= f.label :page %>
     <%= f.number_field :page %>
+    <%= f.label :level %>
+    <%= f.number_field :level %>
   </div>
   <div class="field">
     <%= f.label :qtext %>
-    <%= f.text_area :qtext,  "rows" => 7 %>
+    <%= f.text_area :qtext,  "rows" => 5 %>
     <%= f.file_field :qimage %>
     <%= image_tag @question.qimage.url(:small_thumb).to_s if @question.qimage?%>
     <%= f.check_box :remove_qimage if @question.qimage?%>
     <%=  "Remove Question Image" if @question.qimage?%>
   </div>
-  <div class="field">
-    <%= f.label :answer %>
-    <%= f.text_area :answer, "rows" => 7 %>
+  <div class="form-inline">
+    <%= f.label "Short Answer" %>
+    <%= f.text_field :shortAnswer %>
+    <%= f.label "S1 Presenters" %>
+    <%= f.text_field :presenter1 %>
+    <%= f.label "S2 Presenters" %>
+    <%= f.text_field :presenter2 %>
+ </div>
+ <div class="field">
+     <%= f.label :answer %>
+    <%= f.text_area :answer, "rows" => 6 %>
     <%= f.file_field :aimage %>
     <%= image_tag @question.aimage.url(:small_thumb).to_s if @question.aimage?%>
     <%= f.check_box :remove_aimage if @question.aimage?%>
@@ -40,7 +51,7 @@
   </div>
  <div class="field">
     <%= f.label :notes %>
-    <%= f.text_area :notes,  "rows" => 3 %>
+    <%= f.text_area :notes,  "rows" => 2 %>
  </div>
 
  <div class="field">

@@ -1,17 +1,17 @@
 To do:
 
 7) save question goes to list rather than show
-12) ability to display full image instead of thumbnail
+12) ability to display full image instead of thumbnail - done
 13) add difficulty rating
 18) add a 'links to questions' field holding an array
-20) clean up bootstrap css files
+20) clean up bootstrap css files - Joe
 21) add sorting id field that is calculated from page and num
-22) hide image display when no image
+22) hide image display when no image - done
 23) rspec test suite
-24) put show/answer into a bordered box
+24) put show/answer into a bordered box ?
 26) admin can manage users
 27) add level (which course)
-28) put signin info in navbar
+28) put signin info in navbar - Joe
 
 Done:
 1) commas between topic output in show view - done 7/13/2014

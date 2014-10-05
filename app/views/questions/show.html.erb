@@ -5,7 +5,9 @@
   <%= @question.page %>
   <strong>Num:</strong>
   <%= @question.num %>
-    <strong>Created:</strong>
+  <strong>Level:</strong>
+  <%= @question.level %>
+  <strong>Created:</strong>
   <%= @question.created_at.strftime("%m/%d/%y") %>
   <strong>Modified:</strong>
   <%= @question.updated_at.strftime("%m/%d/%y")  %>
@@ -13,8 +15,7 @@
 </p>
 
 <p>
-  <strong>Question:</strong>
-  <%= @question.qtext %>
+  <pre><span class="inner-pre"><strong>Question: </strong><%= @question.qtext %></span></pre>
 </p>
 <% unless @question.qimage.url.nil? %>
 <p>  
@@ -24,8 +25,9 @@
 <% end %>
 
 <% if can? :update, @question %>
-<pre><span class="inner-pre"><strong><strong>Answer:</strong></strong>
-<%= @question.answer %>
+<pre><span class="inner-pre"><strong><strong>Short Answer: <%= @question.shortAnswer %> | S1Presenters: <%= @question.presenter1 %>  | S2Presenters: <%= @question.presenter2 %></strong></strong>
+</span></pre>
+<pre><span class="inner-pre"><strong><strong>Answer: </strong></strong><%= @question.answer %> 
 </span></pre>
 <% end %> 
 

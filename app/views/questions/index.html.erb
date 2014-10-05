@@ -47,6 +47,7 @@
     <% qcp.page = cp.page %>
     <% qcp.save %>
     <% @questions.each do |question| %>
+    <% if question.num > 0 %>
       <% i = 0 %>
       <% i += 1 if question.qimage?%>
       <% i += 1 if question.aimage?%>
@@ -68,6 +69,7 @@
           <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini' %></td>
         <% end %>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

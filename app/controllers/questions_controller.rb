@@ -84,6 +84,7 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:num, :page, :qtext, :answer, :notes, :qimage, :remove_qimage, :aimage, :remove_aimage, {:topic_ids => []}, :page_cont)
+      params.require(:question).permit(:num, :page, :level, :qtext, :shortAnswer, :answer, :notes, :presenter1, :presenter2, 
+        :qimage, :remove_qimage, :aimage, :remove_aimage, {:topic_ids => []}, :page_cont)
     end
 end
