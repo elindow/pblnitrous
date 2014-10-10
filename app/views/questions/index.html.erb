@@ -29,8 +29,10 @@
       <th><%= sort_link @q, :num, "#" %></th>
       <th>Question Text</th>
       <% if can? :update, @question %>
-        <th>Answer Text</th>
+        <th>Short Answer</th>
         <th>Notes</th>
+        <th>PS1</th>
+        <th>PS2</th>
       <% end %>
       <th>Top</th>
       <th>Img</th>
@@ -56,8 +58,10 @@
         <td><%= question.num %></td>
         <td><%= question.qtext[0..50] %></td>
         <% if can? :update, question %>
-          <td><%= question.answer[0..50] %></td>
+          <td><%= question.shortAnswer[0..50] unless question.shortAnswer.nil? %></td>
           <td><%= question.notes[0..40] %></td>
+          <td><%= question.presenter1[0..3] unless question.presenter1.nil? %></td>
+          <td><%= question.presenter2[0..3] unless question.presenter2.nil? %></td>
         <% end %>
         <td><%= question.topics.count %></td>
         <td><%= i %></td>
