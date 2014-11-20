@@ -29,23 +29,23 @@
     <%= f.label :qtext %>
     <%= f.text_area :qtext,  "rows" => 5 %>
     <%= f.file_field :qimage %>
-    <%= image_tag @question.qimage.url(:small_thumb).to_s if @question.qimage?%>
+    <%= image_tag @question.qimage.url(:thumb).to_s if @question.qimage?%>
     <%= f.check_box :remove_qimage if @question.qimage?%>
     <%=  "Remove Question Image" if @question.qimage?%>
   </div>
   <div class="form-inline">
     <%= f.label "Short Answer" %>
-    <%= f.text_field :shortAnswer %>
+    <%= f.text_field :shortAnswer, :id => "editqa" %>
     <%= f.label "S1 Presenters" %>
-    <%= f.text_field :presenter1 %>
+    <%= f.text_field :presenter1, :id => "editpresenter" %>
     <%= f.label "S2 Presenters" %>
-    <%= f.text_field :presenter2 %>
+    <%= f.text_field :presenter2, :id => "editpresenter" %>
  </div>
  <div class="field">
      <%= f.label :answer %>
     <%= f.text_area :answer, "rows" => 6 %>
     <%= f.file_field :aimage %>
-    <%= image_tag @question.aimage.url(:small_thumb).to_s if @question.aimage?%>
+    <%= image_tag @question.aimage.url(:thumb).to_s if @question.aimage?%>
     <%= f.check_box :remove_aimage if @question.aimage?%>
     <%=  "Remove Answer Image" if @question.aimage?%>
   </div>
