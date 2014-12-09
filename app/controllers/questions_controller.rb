@@ -14,7 +14,6 @@ class QuestionsController < ApplicationController
         @cur_page = cp.page.abs
       end
     end
-    puts @cur_page
     @q = Question.search(params[:q])
     @q.page_eq =@cur_page unless params[:q]
     @questions = @q.result(distinct: true)
