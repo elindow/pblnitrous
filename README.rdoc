@@ -16,6 +16,8 @@
 
 * Built on Nitrous.io
 
+* Search functions using Ransack
+
 * ...
 
 

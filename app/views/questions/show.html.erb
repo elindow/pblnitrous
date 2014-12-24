@@ -67,7 +67,10 @@
 <%= link_to "Previous", Question.find(pid), :class => 'btn btn-mini' %> |
 <% nq = Question.find_by_page_and_num(@question.page,@question.num+1)%>
 <% nid = @question.id %>
+<% if nq.nil? %>
+   <% nq = Question.find_by_page_and_num(@question.page+1,1)%>
+<% end %>
 <% unless nq.nil? %>
-    <% nid = nq.id %>
+   <% nid = nq.id %>
 <% end %>
 <%= link_to "Next", Question.find(nid), :class => 'btn btn-mini' %> |
