@@ -4,7 +4,7 @@
   <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
 <% end %>
 <%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>
-<%= link_to 'Next Page', questions_path, :page_eq => @cur_page+=1, :class => 'btn btn-mini' %>
+<%= link_to 'Next Page', questions_path, :class => 'btn btn-mini' %>
 <%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
 <br>
 <%= search_form_for @q do |f| %>

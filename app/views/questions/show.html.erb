@@ -11,7 +11,14 @@
   <%= @question.created_at.strftime("%m/%d/%y") %>
   <strong>Modified:</strong>
   <%= @question.updated_at.strftime("%m/%d/%y")  %>
-
+  <% nq = Question.find_by_page_and_num(@question.page,@question.num+1)%> | 
+  <% if nq.nil? %>
+     <% nq = Question.find_by_page_and_num(@question.page+1,1)%>
+  <% end %>
+  <% unless nq.nil? %>
+     <% nid = nq.id %>
+  <% end %>
+  <%= link_to "Edit Next", edit_question_path(Question.find(nid)), :class => 'btn btn-mini' %>
 </p>
 
 <p>
