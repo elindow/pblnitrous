@@ -14,11 +14,13 @@
     <%= f.search_field :page_gteq, {:width => "200px", :id => "searchfpn"} %>
     <%= f.label :page_lteq, "and <=", :style => "display: inline-block" %>
     <%= f.search_field :page_lteq, :id => "searchfpn"  %>
-    <%= f.label :qtext_cont, "Question contains", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "Quest contains", :style => "display: inline-block"  %>
     <%= f.search_field :qtext_cont, :id => "searchfpt"  %>
-    <%= f.label :qtext_cont, "Answer contains", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "Ans contains", :style => "display: inline-block"  %>
     <%= f.search_field :answer_cont, :id => "searchfpt"  %>
-    <%= f.label :qtext_cont, "Notes contain", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "Notes contains", :style => "display: inline-block"  %>
+    <%= f.search_field :notes_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "P2 contains", :style => "display: inline-block"  %>
     <%= f.search_field :presenter2_cont, :id => "searchfpt"  %>
     <%= f.submit %>
 <% end %>
@@ -61,8 +63,8 @@
         <% if can? :update, question %>
           <td><%= question.shortAnswer[0..50] unless question.shortAnswer.nil? %></td>
           <td><%= question.notes[0..40] %></td>
-          <td><%= question.presenter1[0..3] unless question.presenter1.nil? %></td>
-          <td><%= question.presenter2[0..3] unless question.presenter2.nil? %></td>
+          <td><%= question.presenter1[0..10] unless question.presenter1.nil? %></td>
+          <td><%= question.presenter2[0..10] unless question.presenter2.nil? %></td>
         <% end %>
         <td><%= question.topics.count %></td>
         <td><%= i %></td>
