@@ -8,19 +8,21 @@
 <%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
 <br>
 <%= search_form_for @q do |f| %>
-    <%= f.label :page_eq, "Page# =", :style => "display: inline-block" %>
+    <%= f.label :level_eq, "Lv#=", :style => "display: inline-block" %>
+    <%= f.search_field :level_eq, :id => "searchfpn" %>
+    <%= f.label :page_eq, "Pg#=", :style => "display: inline-block" %>
     <%= f.search_field :page_eq, :id => "searchfpn" %>
-    <%= f.label :page_gteq, "Page# >=", :style => "display: inline-block" %>
+    <%= f.label :page_gteq, "Pg#>=", :style => "display: inline-block" %>
     <%= f.search_field :page_gteq, {:width => "200px", :id => "searchfpn"} %>
-    <%= f.label :page_lteq, "and <=", :style => "display: inline-block" %>
+    <%= f.label :page_lteq, "& <=", :style => "display: inline-block" %>
     <%= f.search_field :page_lteq, :id => "searchfpn"  %>
-    <%= f.label :qtext_cont, "Quest contains", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "Q cont", :style => "display: inline-block"  %>
     <%= f.search_field :qtext_cont, :id => "searchfpt"  %>
-    <%= f.label :qtext_cont, "Ans contains", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "A cont", :style => "display: inline-block"  %>
     <%= f.search_field :answer_cont, :id => "searchfpt"  %>
-    <%= f.label :qtext_cont, "Notes contains", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "Notes cont", :style => "display: inline-block"  %>
     <%= f.search_field :notes_cont, :id => "searchfpt"  %>
-    <%= f.label :qtext_cont, "P2 contains", :style => "display: inline-block"  %>
+    <%= f.label :qtext_cont, "P2 cont", :style => "display: inline-block"  %>
     <%= f.search_field :presenter2_cont, :id => "searchfpt"  %>
     <%= f.submit %>
 <% end %>
@@ -28,6 +30,7 @@
 <table>
   <thead>
     <tr>
+      <th><%= sort_link @q, :level, "Lv" %></th>
       <th><%= sort_link @q, :page, "Pg" %></th>
       <th><%= sort_link @q, :num, "#" %></th>
       <th>Question Text</th>
@@ -57,6 +60,7 @@
       <% i += 1 if question.qimage?%>
       <% i += 1 if question.aimage?%>
       <tr>
+        <td><%= question.level %></td>
         <td><%= question.page %></td>
         <td><%= question.num %></td>
         <td><%= question.qtext[0..50] %></td>
