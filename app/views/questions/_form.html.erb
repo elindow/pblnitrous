@@ -13,8 +13,8 @@
 
   <% if @question.new_record? %>
      <% @question.num = Question.last.num+1%>
+     <% @question.level = 2 %>
      <% @question.page = Question.maximum("page")%>
-     <% @question.level = 1 %>
   <%end%>
 
   <div class="form-inline">
