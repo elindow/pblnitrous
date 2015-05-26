@@ -1,0 +1,24 @@
+== This is a Rails based site for storing information about Problem Based Learning math problems as used at Trevor Day School
+
+* Questions courtesy of Phillips Exeter Academy
+
+* Creates/maintains a database of questions and topics (has_and_belongs_to_many relationship)
+
+* Ruby version 2.0, Rails 4.0.0
+
+* PostgresSQL database
+
+* User authentication from Devise
+
+* Object authorization from CanCan
+
+* Image Management from CarrierWave/Rmagick
+
+* Built on Nitrous.io
+
+* Search functions using Ransack
+
+* ...
+
+
+

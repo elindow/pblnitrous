@@ -1,0 +1,42 @@
+To do:
+
+7) save question goes to list rather than show
+13) add difficulty rating to question
+18) add a 'links to questions' field holding an array
+20) clean up bootstrap css files - Joe
+23) rspec test suite
+26) admin can manage users
+28) put signin info in navbar - Joe
+29) add models for class and student - class has students
+30) add search line for topics
+31) list of questions containing topic
+32) add search page for questions
+33) full featured multi part search within questions
+34) add subtopics to topics
+
+Done:
+1) commas between topic output in show view - done 7/13/2014
+2) date created and date modified in show view - done 7/13/2014
+3) twitter bootstrap - begun 7/11/14
+4) devise - basuc setup 7/24/14
+5) monospaced font in show question - done 7/30/14
+6) default question and page number for new questions - done 7/20/14
+8) filter question list output by page, topic, etc. - done (basic ransack) 7/28/14
+9) list #of pages having each topic in topic view - done 7/11/14
+10) facility to upload files - done 7/14/14
+11) show # of files uploaded -done 7/23/14
+14) add search function in menu bar - done (basic ransack) 7/28/14
+15) button to remove graphic - done 7/23/14
+16) devise hide answers if not signed in - done 7/26/14
+17) devise security - admin, teacher full view - guests, students limited view - done 7/31/14
+19) add teacher role to devise - done 8/1/14
+25) flash messages don't work - fixed 8/3/14
+12) ability to display full image instead of thumbnail - done
+21) add sorting id field that is calculated from page and num - done
+22) hide image display when no image - done
+24) put show/answer into a bordered box - done
+27) add level (which course) - done
+
+
+answer graphs to be added - 16.2, 16.4, 18.1
+

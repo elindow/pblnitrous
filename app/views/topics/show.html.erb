@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topicname:</strong>
+  <%= @topic.topicName %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @topic.comments %>
+</p>
+
+<p>
+  <strong>Contained in these questions:</strong>
+<% @topic.questions.sort_by { |a| a.page*100+a.num }.each do |q| %>
+    <%=  "\n" if q.page > 50 %>
+    <%= q.level%>:
+    <%= q.page%>-
+    <%=q.num %> |
+<%end%>
+</p>
+
+<% if can? :update, @topic %>
+  <%= link_to 'Edit', edit_topic_path(@topic), :class => 'btn btn-mini' %> |
+<% end %>
+<%= link_to 'Back', topics_path, :class => 'btn btn-mini' %>

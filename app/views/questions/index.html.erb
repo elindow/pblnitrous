@@ -1,0 +1,92 @@
+<h2>List of Questions</h2>
+
+<% if can? :create, Question %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+<% end %>
+<%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>
+<%= link_to 'Next Page', questions_path, :class => 'btn btn-mini' %>
+<%= " There are currently #{Question.count} questions in the list, spread over #{Question.maximum("page")} pages." %>
+<br>
+<%= search_form_for @q do |f| %>
+    <%= f.label :level_eq, "Lv#=", :style => "display: inline-block" %>
+    <%= f.search_field :level_eq, :id => "searchfpn" %>
+    <%= f.label :page_eq, "Pg#=", :style => "display: inline-block" %>
+    <%= f.search_field :page_eq, :id => "searchfpn" %>
+    <%= f.label :page_gteq, "Pg#>=", :style => "display: inline-block" %>
+    <%= f.search_field :page_gteq, {:width => "200px", :id => "searchfpn"} %>
+    <%= f.label :page_lteq, "& <=", :style => "display: inline-block" %>
+    <%= f.search_field :page_lteq, :id => "searchfpn"  %>
+    <%= f.label :qtext_cont, "Q cont", :style => "display: inline-block"  %>
+    <%= f.search_field :qtext_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "A cont", :style => "display: inline-block"  %>
+    <%= f.search_field :answer_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "Notes cont", :style => "display: inline-block"  %>
+    <%= f.search_field :notes_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "P2 cont", :style => "display: inline-block"  %>
+    <%= f.search_field :presenter2_cont, :id => "searchfpt"  %>
+    <%= f.submit %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sort_link @q, :level, "Lv" %></th>
+      <th><%= sort_link @q, :page, "Pg" %></th>
+      <th><%= sort_link @q, :num, "#" %></th>
+      <th>Question Text</th>
+      <% if can? :update, @question %>
+        <th>Short Answer</th>
+        <th>Notes</th>
+        <th>PS1</th>
+        <th>PS2</th>
+      <% end %>
+      <th>Top</th>
+      <th>Img</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions = @questions.sort_by {|question| (question.page*100+question.num)}.reverse%>
+    <% cp = @questions.max { |a, b| a.page <=> b.page } %>
+    <% qcp = Question.find_by_num('-1') %>
+    <% qcp.page = cp.page unless cp.nil?%>
+    <% qcp.save unless cp.nil? %>
+    <% @questions.each do |question| %>
+    <% if question.num > 0 %>
+      <% i = 0 %>
+      <% i += 1 if question.qimage?%>
+      <% i += 1 if question.aimage?%>
+      <tr>
+        <td><%= question.level %></td>
+        <td><%= question.page %></td>
+        <td><%= question.num %></td>
+        <td><%= question.qtext[0..50] %></td>
+        <% if can? :update, question %>
+          <td><%= question.shortAnswer[0..50] unless question.shortAnswer.nil? %></td>
+          <td><%= question.notes[0..40] %></td>
+          <td><%= question.presenter1[0..10] unless question.presenter1.nil? %></td>
+          <td><%= question.presenter2[0..10] unless question.presenter2.nil? %></td>
+        <% end %>
+        <td><%= question.topics.count %></td>
+        <td><%= i %></td>
+        <td><%= link_to 'Show', question, :class => 'btn btn-mini' %></td>
+        <% if can? :update, question %>
+          <td><%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %></td>
+        <% end %>
+        <% if can? :destroy, question %>
+          <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini' %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if can? :create, Question %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+<% end %>
+<%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>

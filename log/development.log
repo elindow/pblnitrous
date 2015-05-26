@@ -1,0 +1,1049 @@
+
+
+Started GET "/" for 54.244.121.10 at 2015-04-29 16:18:17 +0000
+
+PG::ConnectionBad (FATAL:  role "action" does not exist
+):
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/postgresql_adapter.rb:825:in `initialize'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/postgresql_adapter.rb:825:in `new'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/postgresql_adapter.rb:825:in `connect'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/postgresql_adapter.rb:542:in `initialize'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/connection_handling.rb:53:in `connection'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:792:in `current_version'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:800:in `needs_migration?'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:379:in `check_pending!'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:366:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__4111019256822720891__call__callbacks'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 54.244.121.10 at 2015-05-21 17:15:40 +0000
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:379:in `check_pending!'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:366:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__547355330641993245__call__callbacks'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+
+
+Started GET "/" for 54.244.121.10 at 2015-05-26 17:11:06 +0000
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:379:in `check_pending!'
+  .bundle/gems/activerecord-4.0.0/lib/active_record/migration.rb:366:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__3850564209345426337__call__callbacks'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+  .bundle/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  .bundle/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+  .bundle/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  .bundle/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+  [1m[36m (33.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (11.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateQuestions (20140210193621)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (21.8ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "num" integer, "page" integer, "qtext" text, "notes" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140210193621"]]
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTopics (20140210194914)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (8.4ms)[0m  [1mCREATE TABLE "topics" ("id" serial primary key, "topicName" character varying(255), "comments" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140210194914"]]
+  [1m[36m (4.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQtJoinTable (20140211141945)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "questions_topics" ("question_id" integer NOT NULL, "topic_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140211141945"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddAnswerToQuestion (20140705055628)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "questions" ADD COLUMN "answer" text[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140705055628"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddPblImageToQuestions (20140714023545)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "questions" ADD COLUMN "qimage" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "questions" ADD COLUMN "aimage" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140714023545"]]
+  [1m[35m (3.5ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20140724180704)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (8.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724180704"]]
+  [1m[35m (3.6ms)[0m  COMMIT
+Migrating to AddAdminToUsers (20140730174716)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.1ms)[0m  ALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140730174716"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+Migrating to AddTeacherToUsers (20140731035952)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (13.1ms)[0m  ALTER TABLE "users" ADD COLUMN "teacher" boolean DEFAULT 'f'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140731035952"]]
+  [1m[35m (3.7ms)[0m  COMMIT
+Migrating to AddViewerToUsers (20140802051332)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (12.9ms)[0m  ALTER TABLE "users" ADD COLUMN "viewer" boolean DEFAULT 'f'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140802051332"]]
+  [1m[35m (3.7ms)[0m  COMMIT
+Migrating to AddShortAnswerPresenterLevelToQuestion (20141004190229)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "questions" ADD COLUMN "shortAnswer" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "questions" ADD COLUMN "presenter1" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "questions" ADD COLUMN "presenter2" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "questions" ADD COLUMN "level" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141004190229"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 54.244.121.10 at 2015-05-26 17:13:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1190ms (Views: 1181.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:13:44 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:45 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:13:47 +0000
+
+
+Started GET "/users/sign_in" for 54.244.121.10 at 2015-05-26 17:13:52 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 92ms (Views: 58.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_up" for 54.244.121.10 at 2015-05-26 17:13:56 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 54.244.121.10 at 2015-05-26 17:14:12 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9VIBc+4qNZQ5u0J40qYaaPyhKuuYZw9rxrWz2Nj9LQY=", "user"=>{"email"=>"elindow@trevor.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (2.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'elindow@trevor.org' LIMIT 1[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 26 May 2015 17:14:12 UTC +00:00], ["email", "elindow@trevor.org"], ["encrypted_password", "$2a$10$X/yP7HO/WjodctbkGMfGZeERO2Ld4DVGRVUTwlA9luinl2q/g183y"], ["updated_at", Tue, 26 May 2015 17:14:12 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 1[0m  [["last_sign_in_at", Tue, 26 May 2015 17:14:12 UTC +00:00], ["current_sign_in_at", Tue, 26 May 2015 17:14:12 UTC +00:00], ["last_sign_in_ip", "69.38.247.254"], ["current_sign_in_ip", "69.38.247.254"], ["sign_in_count", 1], ["updated_at", Tue, 26 May 2015 17:14:12 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://trevorpbl-100429.nitrousapp.com:3000/
+Completed 302 Found in 96ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/" for 54.244.121.10 at 2015-05-26 17:14:12 +0000
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions" for 54.244.121.10 at 2015-05-26 17:14:19 +0000
+Processing by QuestionsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (1.1ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (1.6ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  Rendered questions/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 198ms (Views: 23.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=90&q%5Bpage_eq%5D=1&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:14:28 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"90", "page_eq"=>"1", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE (("questions"."level" = 90 AND "questions"."page" = 1))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  Rendered questions/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 28ms (Views: 20.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=90&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:14:40 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"90", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.4ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 90
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  Rendered questions/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=90&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:14:44 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"90", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 90
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  Rendered questions/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 25ms (Views: 17.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=2&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:14:51 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"2", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  Rendered questions/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 1.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  UPDATE "users" SET "admin" = $1, "teacher" = $2, "viewer" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["admin", true], ["teacher", true], ["viewer", true], ["updated_at", Tue, 26 May 2015 17:26:21 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=2&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:26:28 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"2", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.4ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  Rendered questions/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:29 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:26:30 +0000
+
+
+Started DELETE "/users/sign_out" for 54.244.121.10 at 2015-05-26 17:31:18 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9VIBc+4qNZQ5u0J40qYaaPyhKuuYZw9rxrWz2Nj9LQY="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://trevorpbl-100429.nitrousapp.com:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:19 +0000
+
+
+Started GET "/users/sign_in" for 54.244.121.10 at 2015-05-26 17:31:23 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 54.244.121.10 at 2015-05-26 17:31:25 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 54.244.121.10 at 2015-05-26 17:31:43 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sBbKtwFR55vJv7gO/m4wwBmxYAAhuJ/pNfHykNa+4CE=", "user"=>{"email"=>"elindow@verizon.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'elindow@verizon.net' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 26 May 2015 17:31:43 UTC +00:00], ["email", "elindow@verizon.net"], ["encrypted_password", "$2a$10$CcyaVCj7USYZmYITm34Z8.giA6a./.LZIWFhlz7ChljvoAozJa3fy"], ["updated_at", Tue, 26 May 2015 17:31:43 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 2  [["last_sign_in_at", Tue, 26 May 2015 17:31:43 UTC +00:00], ["current_sign_in_at", Tue, 26 May 2015 17:31:43 UTC +00:00], ["last_sign_in_ip", "69.38.247.254"], ["current_sign_in_ip", "69.38.247.254"], ["sign_in_count", 1], ["updated_at", Tue, 26 May 2015 17:31:43 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://trevorpbl-100429.nitrousapp.com:3000/
+Completed 302 Found in 83ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 54.244.121.10 at 2015-05-26 17:31:43 +0000
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:43 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:43 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:31:44 +0000
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "admin" = $1, "updated_at" = $2 WHERE "users"."id" = 2  [["admin", true], ["updated_at", Tue, 26 May 2015 17:32:28 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/questions" for 54.244.121.10 at 2015-05-26 17:44:08 +0000
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  SELECT MAX("questions"."page") AS max_id FROM "questions"
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 90[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 842]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 841]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 840]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 839]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 838]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 837]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 836]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 835]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 834]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 833]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 832]]
+  Rendered questions/index.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 95ms (Views: 57.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=92&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"92", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 92
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "questions" SET "page" = $1, "updated_at" = $2 WHERE "questions"."id" = 857[0m  [["page", 92], ["updated_at", Tue, 26 May 2015 17:44:18 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 856]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 855]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 854]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 853]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 852]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 851]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 850]]
+  Rendered questions/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 44ms (Views: 32.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:18 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:19 +0000
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=1&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:44:24 +0000
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"1", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.5ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "questions" SET "page" = $1, "updated_at" = $2 WHERE "questions"."id" = 857[0m  [["page", 1], ["updated_at", Tue, 26 May 2015 17:44:25 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 15]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 14]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 869]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 868]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 13]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 867]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 12]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 866]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 11]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 10]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 865]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 864]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 8]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 863]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 7]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 862]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 861]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 860]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 95ms (Views: 59.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:44:26 +0000
+
+
+Started GET "/questions?utf8=%E2%9C%93&q%5Blevel_eq%5D=&q%5Bpage_eq%5D=90&q%5Bpage_gteq%5D=&q%5Bpage_lteq%5D=&q%5Bqtext_cont%5D=&q%5Banswer_cont%5D=&q%5Bnotes_cont%5D=&q%5Bpresenter2_cont%5D=&commit=Search" for 54.244.121.10 at 2015-05-26 17:49:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"level_eq"=>"", "page_eq"=>"90", "page_gteq"=>"", "page_lteq"=>"", "qtext_cont"=>"", "answer_cont"=>"", "notes_cont"=>"", "presenter2_cont"=>""}, "commit"=>"Search"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (4.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36m (0.4ms)[0m  [1mSELECT MAX("questions"."page") AS max_id FROM "questions"[0m
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT DISTINCT "questions".* FROM "questions" WHERE "questions"."page" = 90
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."num" = -1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.2ms)[0m  [1mUPDATE "questions" SET "page" = $1, "updated_at" = $2 WHERE "questions"."id" = 857[0m  [["page", 90], ["updated_at", Tue, 26 May 2015 17:49:45 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 842]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 841]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 840]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 839]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 838]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 837]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 836]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 835]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 834]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1  [["question_id", 833]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "topics" INNER JOIN "questions_topics" ON "topics"."id" = "questions_topics"."topic_id" WHERE "questions_topics"."question_id" = $1[0m  [["question_id", 832]]
+  Rendered questions/index.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 293ms (Views: 167.7ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/topics.css?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/questions.css?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:46 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/questions.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 54.244.121.10 at 2015-05-26 17:49:47 +0000

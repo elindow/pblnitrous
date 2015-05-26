@@ -1,0 +1,42 @@
+<h2>Listing topics</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topicname</th>
+      <th>Comments</th>
+      <th>Q Count</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.topicName %></td>
+        <td><%= topic.comments %></td>
+        <td><%= topic.questions.count %>
+        <% if false %>
+        <% topic.questions.each do |q| %>
+          <td><%= q.num %> <td>
+        <% end %>
+        <%end%>
+        <td><%= link_to 'Show', topic, :class => 'btn btn-mini' %></td>
+      <% if can? :update, topic %>
+        <td><%= link_to 'Edit', edit_topic_path(topic), :class => 'btn btn-mini' %></td>
+      <% end %>
+      <% if can? :destroy, topic %>
+        <td><%= link_to 'Destroy', topic, :class => 'btn btn-mini', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if can? :update, @topic %>
+  <%= link_to 'New Topic', new_topic_path, :class => 'btn btn-mini' %>
+<% end %>
+<%= link_to 'Questions', questions_path, :class => 'btn btn-mini' %>

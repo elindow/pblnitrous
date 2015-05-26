@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @question.page %>
+  <strong>Num:</strong>
+  <%= @question.num %>
+  <strong>Level:</strong>
+  <%= @question.level %>
+  <strong>Created:</strong>
+  <%= @question.created_at.strftime("%m/%d/%y") %>
+  <strong>Modified:</strong>
+  <%= @question.updated_at.strftime("%m/%d/%y")  %>
+  <% nq = Question.find_by_page_and_num(@question.page,@question.num+1)%> | 
+  <% if nq.nil? %>
+     <% nq = Question.find_by_page_and_num(@question.page+1,1)%>
+  <% end %>
+  <% unless nq.nil? %>
+     <% nid = nq.id %>
+  <% end %>
+  <%= link_to "Edit Next", edit_question_path(Question.find(nid)), :class => 'btn btn-mini' %> |
+  <%= link_to "Next", Question.find(nid), :class => 'btn btn-mini' %> |
+  <%= link_to 'Back', questions_path, :class => 'btn btn-mini' %>
+</p>
+
+<p>
+  <pre><span class="inner-pre"><strong>Question: </strong><%= @question.qtext %></span></pre>
+</p>
+<% unless @question.qimage.url.nil? %>
+<p>  
+  <strong>Question Image: </strong>
+  <%= image_tag @question.qimage.url.to_s %>
+</p>
+<% end %>
+
+<% if can? :update, @question %>
+<pre><span class="inner-pre"><strong><strong>Short Answer: <%= @question.shortAnswer %> | S1Presenters: <%= @question.presenter1 %>  | S2Presenters: <%= @question.presenter2 %></strong></strong>
+</span></pre>
+<pre><span class="inner-pre"><strong><strong>Answer: </strong></strong><%= @question.answer %> 
+</span></pre>
+<% end %> 
+
+<p>
+  <% if can? :update, @question  %>
+  <% unless @question.aimage.url.nil? %>
+    <strong>Answer Image:</strong>
+    <%= image_tag @question.aimage.url().to_s %>
+  <% end %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @question.notes %>
+</p>
+
+<p>
+  <strong>Topics:</strong>
+  <% @question.topics.each do |t| %>
+    <td><%= t.topicName%></td>
+    - 
+  <% end %>
+</p>
+<% if can? :update, @question %>
+  <%= link_to 'Edit', edit_question_path(@question), :class => 'btn btn-mini' %> |
+<% end %>
+<%= link_to 'Back', questions_path, :class => 'btn btn-mini' %> |
+<% if can? :create, Question %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %> |
+<% end %>
+<% pq = Question.find_by_page_and_num(@question.page,@question.num-1)%>
+<% pid = @question.id %>
+<% unless pq.nil? %>
+    <% pid = pq.id %>
+<% end %>
+<%= link_to "Previous", Question.find(pid), :class => 'btn btn-mini' %> |
+<% nq = Question.find_by_page_and_num_and_level(@question.page,@question.num+1,@question.level)%>
+<% nid = @question.id %>
+<% if nq.nil? %>
+   <% nq = Question.find_by_page_and_num(@question.page+1,1)%>
+<% end %>
+<% unless nq.nil? %>
+   <% nid = nq.id %>
+<% end %>
+<%= link_to "Next", Question.find(nid), :class => 'btn btn-mini' %> |
