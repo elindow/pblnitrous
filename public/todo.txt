@@ -13,6 +13,7 @@ To do:
 32) add search page for questions
 33) full featured multi part search within questions
 34) add subtopics to topics
+35) crashes on last problem of page when updated (looking for non-existent next?)
 
 Done:
 1) commas between topic output in show view - done 7/13/2014
