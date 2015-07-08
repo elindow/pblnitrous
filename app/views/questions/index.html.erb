@@ -22,6 +22,8 @@
     <%= f.search_field :answer_cont, :id => "searchfpt"  %>
     <%= f.label :qtext_cont, "Notes cont", :style => "display: inline-block"  %>
     <%= f.search_field :notes_cont, :id => "searchfpt"  %>
+    <%= f.label :qtext_cont, "P1 cont", :style => "display: inline-block"  %>
+    <%= f.search_field :presenter1_cont, :id => "searchfpt"  %>
     <%= f.label :qtext_cont, "P2 cont", :style => "display: inline-block"  %>
     <%= f.search_field :presenter2_cont, :id => "searchfpt"  %>
     <%= f.submit %>
@@ -53,6 +55,7 @@
     <% cp = @questions.max { |a, b| a.page <=> b.page } %>
     <% qcp = Question.find_by_num('-1') %>
     <% qcp.page = cp.page unless cp.nil?%>
+    <% qcp.level = cp.level unless cp.nil?%>    
     <% qcp.save unless cp.nil? %>
     <% @questions.each do |question| %>
     <% if question.num > 0 %>

@@ -14,7 +14,7 @@
   <% if @question.new_record? %>
      <% @question.num = Question.last.num+1%>
      <% @question.level = 2 %>
-     <% @question.page = Question.maximum("page")%>
+     <% @question.page = Question.where(:level => @question.level).maximum("page")%>
   <%end%>
 
   <div class="form-inline">
@@ -56,7 +56,7 @@
  </div>
 
  <div class="field">
-   <% for topic in Topic.find(:all, :order => '"topicName"' ) %>
+   <% for topic in Topic.all(:order => '"topicName"' ) %>
      <%= check_box_tag "question[topic_ids][]", topic.id, @question.topics.include?(topic) %>
      <%= topic.topicName %>
    <%end%>

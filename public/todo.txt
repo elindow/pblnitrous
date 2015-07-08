@@ -14,6 +14,13 @@ To do:
 33) full featured multi part search within questions
 34) add subtopics to topics
 35) crashes on last problem of page when updated (looking for non-existent next?)
+36) back button stays on level of current problem
+37) new problem defaults to highest page of current level
+38) topics are assigned to a level
+39) topic choices displayed at problem creation time are filtered by level
+40) two difficulty values for each question (teacher/student)
+41) keep level on 'edit next' even if different number of problems on each page
+42) 'next' button on edit question needs to know about levels
 
 Done:
 1) commas between topic output in show view - done 7/13/2014

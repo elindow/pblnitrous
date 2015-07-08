@@ -11,9 +11,10 @@
   <%= @question.created_at.strftime("%m/%d/%y") %>
   <strong>Modified:</strong>
   <%= @question.updated_at.strftime("%m/%d/%y")  %>
-  <% nq = Question.find_by_page_and_num(@question.page,@question.num+1)%> | 
+  <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page,@question.num+1)%> | 
   <% if nq.nil? %>
-     <% nq = Question.find_by_page_and_num(@question.page+1,1)%>
+     <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page+1,1)%>
+     <% nid = @question.id %>
   <% end %>
   <% unless nq.nil? %>
      <% nid = nq.id %>
@@ -68,16 +69,16 @@
 <% if can? :create, Question %>
   <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %> |
 <% end %>
-<% pq = Question.find_by_page_and_num(@question.page,@question.num-1)%>
+<% pq = Question.where(:level => @question.level).find_by_page_and_num(@question.page,@question.num-1)%>
 <% pid = @question.id %>
 <% unless pq.nil? %>
     <% pid = pq.id %>
 <% end %>
 <%= link_to "Previous", Question.find(pid), :class => 'btn btn-mini' %> |
-<% nq = Question.find_by_page_and_num_and_level(@question.page,@question.num+1,@question.level)%>
+<% nq = Question.where(:level => @question.level).find_by_page_and_num_and_level(@question.page,@question.num+1,@question.level)%>
 <% nid = @question.id %>
 <% if nq.nil? %>
-   <% nq = Question.find_by_page_and_num(@question.page+1,1)%>
+   <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page+1,1)%>
 <% end %>
 <% unless nq.nil? %>
    <% nid = nq.id %>

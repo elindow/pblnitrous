@@ -18,8 +18,17 @@ class QuestionsController < ApplicationController
         @cur_page = cp.page.abs
       end
     end
+    if @cur_level.nil? 
+      cp = Question.find_by_num("-1") 
+      if cp.nil?
+        @cur_level = 1
+      else
+        @cur_level = cp.level
+      end
+    end
     @q = Question.search(params[:q])
-    @q.page_eq =@cur_page unless params[:q]
+    @q.page_eq = @cur_page unless params[:q]
+    @q.level_eq = @cur_level unless params[:q]    
     @questions = @q.result(distinct: true)
   end
 
