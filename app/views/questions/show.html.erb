@@ -21,7 +21,10 @@
   <% end %>
   <%= link_to "Edit Next", edit_question_path(Question.find(nid)), :class => 'btn btn-mini' %> |
   <%= link_to "Next", Question.find(nid), :class => 'btn btn-mini' %> |
-  <%= link_to 'Back', questions_path, :class => 'btn btn-mini' %>
+  <%= link_to 'Back', questions_path, :class => 'btn btn-mini' %> |
+  <% if can? :create, Question %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %> |
+<% end %>
 </p>
 
 <p>
