@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lname: MyString
+  fname: MyString
+  clsname: MyString
+  grade: 1
+  genderf: false
+
+two:
+  lname: MyString
+  fname: MyString
+  clsname: MyString
+  grade: 1
+  genderf: false
