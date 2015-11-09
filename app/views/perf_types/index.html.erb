@@ -1,0 +1,43 @@
+<h1>Listing perf_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ps</th>
+      <th>Pt</th>
+      <th>As</th>
+      <th>Cq</th>
+      <th>Po</th>
+      <th>Io</th>
+      <th>Db</th>
+      <th>Question</th>
+      <th>Student</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perf_types.each do |perf_type| %>
+      <tr>
+        <td><%= perf_type.ps %></td>
+        <td><%= perf_type.pt %></td>
+        <td><%= perf_type.as %></td>
+        <td><%= perf_type.cq %></td>
+        <td><%= perf_type.po %></td>
+        <td><%= perf_type.io %></td>
+        <td><%= perf_type.db %></td>
+        <td><%= perf_type.question.num %></td>
+        <td><%= perf_type.student.lname %></td>
+        <td><%= link_to 'Show', perf_type %></td>
+        <td><%= link_to 'Edit', edit_perf_type_path(perf_type) %></td>
+        <td><%= link_to 'Destroy', perf_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perf type', new_perf_type_path %>

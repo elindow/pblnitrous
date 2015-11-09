@@ -1,0 +1,53 @@
+<%= form_for(@perf_type) do |f| %>
+  <% if @perf_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@perf_type.errors.count, "error") %> prohibited this perf_type from being saved:</h2>
+
+      <ul>
+      <% @perf_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ps %><br>
+    <%= f.number_field :ps %>
+  </div>
+  <div class="field">
+    <%= f.label :pt %><br>
+    <%= f.number_field :pt %>
+  </div>
+  <div class="field">
+    <%= f.label :as %><br>
+    <%= f.number_field :as %>
+  </div>
+  <div class="field">
+    <%= f.label :cq %><br>
+    <%= f.number_field :cq %>
+  </div>
+  <div class="field">
+    <%= f.label :po %><br>
+    <%= f.number_field :po %>
+  </div>
+  <div class="field">
+    <%= f.label :io %><br>
+    <%= f.number_field :io %>
+  </div>
+  <div class="field">
+    <%= f.label :db %><br>
+    <%= f.number_field :db %>
+  </div>
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label :student %><br>
+    <%= f.text_field :student %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

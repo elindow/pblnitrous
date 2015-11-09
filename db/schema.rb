@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829080454) do
+ActiveRecord::Schema.define(version: 20150831205656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "perf_types", force: true do |t|
+    t.integer  "ps"
+    t.integer  "pt"
+    t.integer  "as"
+    t.integer  "cq"
+    t.integer  "po"
+    t.integer  "io"
+    t.integer  "db"
+    t.integer  "question_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "perf_types", ["question_id"], name: "index_perf_types_on_question_id", using: :btree
+  add_index "perf_types", ["student_id"], name: "index_perf_types_on_student_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.integer  "num"
@@ -45,6 +62,7 @@ ActiveRecord::Schema.define(version: 20150829080454) do
     t.boolean  "genderf"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "inits"
   end
 
   create_table "topics", force: true do |t|

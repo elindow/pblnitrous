@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ps: 1
+  pt: 1
+  as: 1
+  cq: 1
+  po: 1
+  io: 1
+  db: 1
+  question_id: 
+  student_id: 
+
+two:
+  ps: 1
+  pt: 1
+  as: 1
+  cq: 1
+  po: 1
+  io: 1
+  db: 1
+  question_id: 
+  student_id: 

@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ps:</strong>
+  <%= @perf_type.ps %>
+</p>
+
+<p>
+  <strong>Pt:</strong>
+  <%= @perf_type.pt %>
+</p>
+
+<p>
+  <strong>As:</strong>
+  <%= @perf_type.as %>
+</p>
+
+<p>
+  <strong>Cq:</strong>
+  <%= @perf_type.cq %>
+</p>
+
+<p>
+  <strong>Po:</strong>
+  <%= @perf_type.po %>
+</p>
+
+<p>
+  <strong>Io:</strong>
+  <%= @perf_type.io %>
+</p>
+
+<p>
+  <strong>Db:</strong>
+  <%= @perf_type.db %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @perf_type.question.level %>
+  <%= @perf_type.question.page %>
+  <%= @perf_type.question.num %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @perf_type.student.fname %>
+  <%= @perf_type.student.lname %>
+</p>
+
+<%= link_to 'Edit', edit_perf_type_path(@perf_type) %> |
+<%= link_to 'Back', perf_types_path %>

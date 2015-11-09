@@ -62,6 +62,13 @@
    <%end%>
 </div>
 
+<div class="field">
+  <% for student in Student.all(:order => '"inits"' ) %>
+     <%= check_box_tag "question[topic_ids][]", student.id, @question.topics.include?(topic) %>
+     <%= student.inits %>
+   <%end%>
+</div>
+
 <% if false %>
   <div class="field">
     <%= fields_for :topic do |tf| %>

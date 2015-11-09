@@ -5,9 +5,11 @@
     <tr>
       <th>Lname</th>
       <th>Fname</th>
+      <th>Inits</th>
       <th>Clsname</th>
       <th>Grade</th>
-      <th>Genderf</th>
+      <th>G</th>
+      <th>#Q</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,9 +21,11 @@
       <tr>
         <td><%= student.lname %></td>
         <td><%= student.fname %></td>
+        <td><%= student.inits %></td>
         <td><%= student.clsname %></td>
         <td><%= student.grade %></td>
-        <td><%= student.genderf %></td>
+        <td><%= student.genderf ? 'F' : 'M' %></td>
+        <td><%= PerfType.count %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

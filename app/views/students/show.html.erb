@@ -21,8 +21,13 @@
 </p>
 
 <p>
-  <strong>Genderf:</strong>
-  <%= @student.genderf %>
+  <strong>Gender:</strong>
+  <%= @student.genderf ? 'F' : 'M' %>
+</p>
+
+<p>
+  <strong>Initials:</strong>
+  <%= @student.inits %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

@@ -1,6 +1,8 @@
 
 
 Pbl::Application.routes.draw do
+  resources :perf_types
+
   resources :students
 
   devise_for :users
