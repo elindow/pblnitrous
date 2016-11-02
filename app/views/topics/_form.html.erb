@@ -16,6 +16,14 @@
     <%= f.text_field :topicName %>
   </div>
   <div class="field">
+    <%= f.label "Lev1:" %>
+    <%= f.check_box :lev1 %>
+  </div>
+  <div class="field">
+    <%= f.label "Lev2:" %>
+    <%= f.check_box :lev2 %>
+  </div>
+  <div class="field">
     <%= f.label "Comments:" %>
     <%= f.text_area :comments, "rows" => 4 %>
   </div>

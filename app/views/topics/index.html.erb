@@ -4,6 +4,8 @@
   <thead>
     <tr>
       <th>Topicname</th>
+      <th>In Lev1?</th>
+      <th>In Lev2?</th>
       <th>Comments</th>
       <th>Q Count</th>
       <th></th>
@@ -16,6 +18,8 @@
     <% @topics.each do |topic| %>
       <tr>
         <td><%= topic.topicName %></td>
+        <td><%= topic.lev1 ? "yes" : "no"%></td>
+        <td><%= topic.lev2 ? "yes" : "no"%></td>
         <td><%= topic.comments %></td>
         <td><%= topic.questions.count %>
         <% if false %>

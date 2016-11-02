@@ -1,7 +1,16 @@
 <% @page_title = "Edit Question" %>
 <%= @page_title %> | 
 <%= link_to 'Show', @question, :class => 'btn btn-mini' %> |
-<%= link_to 'Back', questions_path, :class => 'btn btn-mini' %>
+<%= link_to 'Back', questions_path, :class => 'btn btn-mini' %> | 
+  <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page,@question.num+1)%> | 
+ <% if nq.nil? %>
+     <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page+1,1)%>
+     <% nid = @question.id %>
+ <% end %>
+ <% unless nq.nil? %>
+    <% nid = nq.id %>
+ <% end %>
+<%= link_to 'Edit Next', edit_question_path(Question.find(nid)), :class => 'btn btn-mini' %>
 <%= render 'form' %>
 <%= link_to 'Show', @question, :class => 'btn btn-mini' %> |
 <%= link_to 'Back', questions_path, :class => 'btn btn-mini' %>

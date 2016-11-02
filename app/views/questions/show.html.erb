@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Level:</strong>
+  <%= @question.level %>
   <strong>Page:</strong>
   <%= @question.page %>
   <strong>Num:</strong>
   <%= @question.num %>
-  <strong>Level:</strong>
-  <%= @question.level %>
   <strong>Created:</strong>
   <%= @question.created_at.strftime("%m/%d/%y") %>
   <strong>Modified:</strong>
@@ -35,6 +35,15 @@
   <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %> |
 <% end %>
 </p>
+
+<p>
+  <strong>Topics:</strong>
+  <% @question.topics.each do |t| %>
+    <td><%= t.topicName%></td>
+    - 
+  <% end %>
+</p>
+
 
 <p>
   <pre><span class="inner-pre"><strong>Question: </strong><%= @question.qtext %></span></pre>
@@ -67,13 +76,6 @@
   <%= @question.notes %>
 </p>
 
-<p>
-  <strong>Topics:</strong>
-  <% @question.topics.each do |t| %>
-    <td><%= t.topicName%></td>
-    - 
-  <% end %>
-</p>
 
 <% pq = Question.where(:level => @question.level).find_by_page_and_num(@question.page,@question.num-1)%>
 <% pid = @question.id %>

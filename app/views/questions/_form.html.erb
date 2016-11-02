@@ -26,6 +26,17 @@
     <%= f.number_field :level %>
     <%= f.submit %>
   </div>
+
+ <div class="field">
+   <% for topic in Topic.all(:order => '"topicName"' ) %>
+     <% if (( @question.level == 2 && topic.lev2 ) || (@question.level ==1 && topic.lev1))%>
+       <%= check_box_tag "question[topic_ids][]", topic.id, @question.topics.include?(topic) %>
+       <%= topic.topicName %>
+     <% end %>
+   <%end%>
+</div>
+
+
   <div class="field">
     <%= f.label :qtext %>
     <%= f.text_area :qtext,  "rows" => 5 %>
@@ -55,19 +66,14 @@
     <%= f.text_area :notes,  "rows" => 2 %>
  </div>
 
- <div class="field">
-   <% for topic in Topic.all(:order => '"topicName"' ) %>
-     <%= check_box_tag "question[topic_ids][]", topic.id, @question.topics.include?(topic) %>
-     <%= topic.topicName %>
-   <%end%>
-</div>
-
+<% if false %>
 <div class="field">
   <% for student in Student.all(:order => '"inits"' ) %>
      <%= check_box_tag "question[topic_ids][]", student.id, @question.topics.include?(topic) %>
      <%= student.inits %>
    <%end%>
 </div>
+<% end %>
 
 <% if false %>
   <div class="field">
