@@ -28,7 +28,7 @@
   </div>
 
  <div class="field">
-   <% for topic in Topic.all(:order => '"topicName"' ) %>
+   <% for topic in Topic.all.order(:topicname) %>
      <% if (( @question.level == 2 && topic.lev2 ) || (@question.level ==1 && topic.lev1))%>
        <%= check_box_tag "question[topic_ids][]", topic.id, @question.topics.include?(topic) %>
        <%= topic.topicName %>

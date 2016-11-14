@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: pbl_development
   pool: 5
-  username: nitrous
-  password:
+  username: elindow
+  password: 2expect5
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have

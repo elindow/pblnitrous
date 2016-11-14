@@ -27,33 +27,33 @@
 </head>
 <body>
 <div class="container-fluid">
-<div class="navbar navbar-inverse">  
-  <div class="navbar-inner">  
-    <div class="container">  
-      <ul class="nav">  
-        <li class="active">  
-          <a class="brand" href="#">TrevorPBL</a>  
-        </li>  
-        <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
-        <% if user_signed_in? %>
-          <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-        <% else %>
-          <li class="<%= 'active' if current_page?(new_user_session_path) %>"><%= link_to "Sign In", new_user_session_path %>
-        <% end %>
-        <% if user_signed_in? %>
-        <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Edit Account", edit_user_registration_path %></li>
-        <% else %>
-          <li class="<%= 'active' if current_page?(new_user_registration_path) %>"><%= link_to "Sign Up", new_user_registration_path %>
-        <% end %>
-        <li class="<%= 'active' if current_page?(questions_path) %>"><%= link_to "Questions", questions_path %></li>  
-        <li class="<%= 'active' if current_page?(topics_path) %>"><%= link_to "Topics", topics_path %></li>  
-        <li class="<%= 'active' if current_page?(students_path) %>"><%= link_to "Students", students_path %></li>  
-        <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>  
-      </ul> 
-    </div>  
-  </div>  
-</div>
-<%= yield %>
+    <nav class="navbar navbar-inverse">  
+      <div class="navbar-inner">  
+        <div class="container">  
+          <ul class="nav">  
+            <li class="active">  
+            <a class="brand" href="#">TrevorPBL</a>  
+            </li>  
+            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+            <% if user_signed_in? %>
+              <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+            <% else %>
+              <li class="<%= 'active' if current_page?(new_user_session_path) %>"><%= link_to "Sign In", new_user_session_path %>
+            <% end %>
+            <% if user_signed_in? %>
+              <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Edit Account", edit_user_registration_path %></li>
+            <% else %>
+              <li class="<%= 'active' if current_page?(new_user_registration_path) %>"><%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
+            <li class="<%= 'active' if current_page?(questions_path) %>"><%= link_to "Question", questions_path %></li>  
+            <li class="<%= 'active' if current_page?(topics_path) %>"><%= link_to "Topics", topics_path %></li>  
+            <li class="<%= 'active' if current_page?(students_path) %>"><%= link_to "Students", students_path %></li>  
+            <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>  
+         </ul> 
+        </div>  
+      </div>  
+    </nav>
+  <%= yield %>
 <%= flash[:error] %>
 <% if user_signed_in? %>
    Signed in as <%= current_user.email %>

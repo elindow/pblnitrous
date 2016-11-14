@@ -1,13 +1,13 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 #for image uploads
-gem 'rmagick'
+gem 'mini_magick'
 gem 'carrierwave'
 
 #for user authentication and management
@@ -20,22 +20,32 @@ gem 'cancancan'
 gem 'ransack'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+gem 'bootstrap'
 
-gem 'twitter-bootstrap-rails'
+#source 'http://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+#end
 
-gem 'less-rails'
+#gem 'twitter-bootstrap-rails'
+#gem 'bootstrap-sass', '~> 3.3.7'
+
+#gem 'sprockets-rails', :require => 'sprockets/railtie'
+#gem 'sprockets-rails'
+#gem 'sprockets'
+
+#gem 'less-rails'
 
 gem 'high_voltage'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -55,8 +65,10 @@ gem 'hirb'
 
 group :pbl_development do
 gem "rspec-rails"
-gem 'hirb'
+#rails gem 'hirb'
 gem "fabrication"
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 end
 
 # Use ActiveModel has_secure_password
