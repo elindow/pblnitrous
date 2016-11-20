@@ -43,6 +43,7 @@ GEM
     bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bootstrap_form (2.5.2)
     builder (3.2.2)
     cancancan (1.15.0)
     carrierwave (0.11.2)
@@ -197,6 +198,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap
+  bootstrap_form
   cancancan
   carrierwave
   coffee-rails (~> 4.0.0)
