@@ -55,7 +55,6 @@ gem 'hirb'
 
 group :pbl_development do
 gem "rspec-rails"
-gem 'hirb'
 gem "fabrication"
 end
 
